@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block yu %}
+<p>Welcome to the Jurassic Park!</p>
+ <div class="post">
+	{% if post.published_date %}
+	 <div class="date">
+		{{post.published_date}}
+	<div>
+	{% endif %}
+	<h1><a href="{% url 'post_detail_detail' pk=post.pk %}">{{post.title}}</a></h1>
+	<p>{{post.text| linebreaks}}</p>
+</div>
+{% endblock%}

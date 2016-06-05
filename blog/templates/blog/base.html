@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<title>Yu Dreams</title>
+<link rel='stylesheet' href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<p>Veni, vidi, vici!</p>
+<div class='page-header'>
+<a href="{% url 'add' %}" class="top-menu"><span class='glyphicon glyphicon-plus'></span></a> 
+</div>
+{% block yu %}
+{% endblock %}
+</body>
+<html>

@@ -19,3 +19,9 @@ class Post(models.Model):
 	def __str__(self):
 		return self.title
 
+class Photo(models.Model):
+	filename=models.CharField(max_length=200)
+	votes=models.IntegerField(default=0)
+	image=models.ImageField(null=True, blank=True)	
+	def __str__(self):
+		return self.filename
